@@ -50,3 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach((el) => observer.observe(el));
 });
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  virtual: true, // only renders visible slides
+});
