@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PulseZone Gym – Transform your body and mind with expert-guided workouts and personalized fitness programs.">
+<meta name="keywords" content="gym, fitness, workout, PulseZone, training, health">
+<meta name="author" content="PulseZone Fitness">
+<link rel="icon" href="/images/pulsezone-removebg-preview.png" type="image/png">
+
+  <title>Enroll - PulseZone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 p-10 font-sans">
+  <section class="flex flex-col md:flex-row w-full h-screen">
+    <!-- Left: Image Side -->
+    <div class="md:w-1/2 w-full h-1/2 md:h-full relative ">
+      <img 
+        src="/images/sven-mieke-MsCgmHuirDo-unsplash.jpg" 
+        alt="PulseZone Gym" 
+        class="object-cover w-full h-full  "
+      >
+      <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white text-center px-6">
+        <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wide text-[#BD0A0D] ">Join PulseZone</h2>
+        <p class="mt-4 text-base md:text-lg max-w-md " >
+          Unlock your potential — train with experts, push your limits, and become the best version of yourself.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Enroll Form -->
+    <div class="md:w-1/2 w-full flex items-center justify-center bg-white px-6 md:px-12 py-10 md:py-0">
+      
+      <!-- FORM -->
+      <form 
+        id="enrollForm" 
+        action="https://formspree.io/f/mdkwbrvl" 
+        method="POST" 
+        class="w-full max-w-md space-y-6"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-center m-4 text-[#BD0A0D] uppercase">Enroll Now</h2>
+        <p class="text-center text-gray-600">Transform your fitness journey with PulseZone today.</p>
+
+        <!-- Full Name -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-1">Full Name</label>
+          <input 
+            name="fullname"
+            type="text" 
+            placeholder="Enter your name" 
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#BD0A0D]"
+          >
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-1">Email</label>
+          <input 
+            name="email"
+            type="email" 
+            placeholder="Enter your email" 
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#BD0A0D]"
+          >
+        </div>
+
+        <!-- Membership Plan -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-1">Membership Plan</label>
+          <select 
+            name="plan"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#BD0A0D]"
+          >
+            <option value="">Select a plan</option>
+            <option>Basic Plan</option>
+            <option>Pro Plan</option>
+            <option>Elite Plan</option>
+          </select>
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+          <label class="block text-gray-700 font-semibold mb-1">Phone Number</label>
+          <input 
+            name="phone"
+            type="tel" 
+            placeholder="Enter your phone number" 
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-[#BD0A0D]"
+          >
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="w-full bg-[#BD0A0D] text-white font-semibold py-3 rounded-lg hover:bg-stone-600 transition duration-300"
+        >
+          Enroll Now
+        </button>
+
+        
+      </form>
+
+      <!-- WELCOME SCREEN -->
+      <div id="welcomeScreen" class="hidden text-center animate-fadeIn">
+        <h2 class="text-4xl font-bold text-[#BD0A0D] mb-3">Welcome to PulseZone 💪🏽</h2>
+        <p class="text-gray-600">Your fitness journey starts now! Redirecting...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animation -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.6s ease-in-out;
+    }
+  </style>
+
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById('enrollForm');
+    const welcome = document.getElementById('welcomeScreen');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+
+      try {
+        // Send form data to Formspree
+        await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        // Show welcome message
+        form.classList.add('hidden');
+        welcome.classList.remove('hidden');
+
+        // Redirect to home after 3 seconds
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 3000);
+
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
