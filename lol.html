@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PulseZone Gym – Transform your body and mind with expert-guided workouts and personalized fitness programs.">
+  <meta name="keywords" content="gym, fitness, workout, PulseZone, training, health">
+  <meta name="author" content="PulseZone Fitness">
+  <link rel="icon" href="/images/pulsezone-removebg-preview.png" type="image/png">
+  <title>PulseZone | Fitness & Training Gym</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=BBH+Sans+Hegarty&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    html, body {
+      overflow-x: hidden; /* prevent horizontal scroll */
+    }
+    body::-webkit-scrollbar { display: none; }
+    body { scrollbar-width: none; -ms-overflow-style: none; }
+    .p { font-family: 'BBH Sans Hegarty', sans-serif; }
+    .fade-in { opacity: 0; transform: translateY(40px); transition: all 0.6s ease; }
+    .show { opacity: 1; transform: translateY(0); }
+    .swiper-button-next, .swiper-button-prev { pointer-events: auto; }
+  </style>
+</head>
+<body class="m-0 p-0 box-border relative">
+
+<!-- Hero Section -->
+<section class="w-full relative h-[570px] md:h-[650px] overflow-hidden">
+  <img src="/images/sven-mieke-MsCgmHuirDo-unsplash.webp" alt="hero-image" class="object-cover w-full h-full">
+
+  <!-- Fixed Nav -->
+  <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-10 py-2 bg-transparent">
+    <img src="/images/pulsezone-removebg-preview.webp" loading="lazy" alt="Logo" class="w-[100px] md:w-[150px]">
+    <div class="hidden md:flex gap-4 bg-white/30 text-black backdrop-blur-md px-5 py-3 rounded-[10px]">
+      <a href="#home" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Home</a>
+      <a href="#about" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">About Us</a>
+      <a href="#programs" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Programs</a>
+      <a href="#memberships" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Memberships</a>
+      <a href="#schedule" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Schedule</a>
+    </div>
+    <button onclick="location.href='enroll.html'" class="bg-[#BD0A0D] hover:bg-stone-500 text-white py-2 px-4 rounded-[10px] text-sm md:text-base">Enroll</button>
+  </nav>
+
+  <!-- Hero Text -->
+  <div id="home" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center px-4">
+    <h1 class="text-[#BD0A0D] text-5xl sm:text-6xl md:text-7xl lg:text-[100px] font-bold mb-4 uppercase tracking-wide">PulseZone</h1>
+    <p class="max-w-xl text-sm sm:text-base md:text-lg mb-6 text-white">Transform your body and mind with expert-guided workouts, personalized training plans, and a community that motivates you to push your limits every day.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button onclick="location.href='enroll.html'" class="bg-[#BD0A0D] hover:bg-white hover:text-[#BD0A0D] px-6 py-3 rounded text-white font-semibold">Get Started</button>
+      <button onclick="location.href='learnmore.html'" class="bg-transparent border-2 border-white px-6 py-3 text-stone-200 rounded font-semibold hover:bg-white hover:text-black transition">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="w-full relative bg-black bg-cover bg-center h-[300px] sm:h-[350px] md:h-[400px] flex items-center justify-center text-center">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-white px-4">
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold uppercase">About PulseZone</h1>
+    <p class="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">Discover the story, mission, and people behind the movement transforming fitness.</p>
+  </div>
+</section>
+
+<!-- Story Section -->
+<div class="max-w-6xl mx-auto py-16 px-6 md:px-10 grid md:grid-cols-2 gap-10 items-center">
+  <img data-aos="zoom-in-down" src="/images/anastase-maragos-9dzWZQWZMdE-unsplash.webp" alt="Our story" class="rounded-2xl shadow-lg w-full object-cover h-[400px]">
+  <div>
+    <h2 data-aos="fade-left" class="text-3xl fade-in font-bold mb-4 text-stone-600">Our Story</h2>
+    <p data-aos="fade-left" class="text-gray-700 fade-in leading-relaxed mb-4">PulseZone started as a small fitness community with one goal — to make health and strength accessible to everyone. Today, we’re proud to be a hub for transformation, empowering individuals to push past limits and live stronger every day.</p>
+    <p data-aos="fade-left" class="text-gray-700 fade-in leading-relaxed">Our passion for wellness and innovation drives us to create powerful training programs, expert coaching, and a motivating environment where everyone thrives.</p>
+  </div>
+</div>
+
+<!-- Programs Section -->
+<section class="bg-stone-500 py-16 px-6 md:px-10">
+  <div id="programs" class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-stone-700 mb-6">Our Programs</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-12">Explore the variety of training programs PulseZone offers.</p>
+
+    <div data-aos="zoom-in-down" class="relative">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slides... (All your program slides here, optimized like earlier) -->
+                     <!-- slide 1 -->
+          <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/samuel-girven-RrCvrrYtlqQ-unsplash.webp" rel="preload" loading="lazy" alt="Strength" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">Strength Training</h3>
+              <p class="text-gray-600 text-sm">Build muscle and endurance with structured workouts.</p>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/victor-freitas-vqDAUejnwKw-unsplash.webp" rel="preload" loading="lazy" alt="HIT" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">HIT Workouts</h3>
+              <p class="text-gray-600 text-sm">Torch calories with short, intense sessions.</p>
+            </div>
+          </div>
+            <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/vitaly-gariev-Qh0JrqT9hqU-unsplash.webp" rel="preload" loading="lazy" alt="HIT" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">functional training</h3>
+              <p class="text-gray-600 text-sm">Stretching routines, yoga, or Pilates.</p>
+            </div>
+          </div>
+            <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/victor-freitas-nlZTjUZX2qo-unsplash.webp" rel="preload" loading="lazy" alt="HIT" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">Group Fitness Classes</h3>
+              <p class="text-gray-600 text-sm">Spin, Zumba, aerobics, classes led by an instructor.</p>
+            </div>
+          </div>
+            <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/debby-hudson-U-O9DCDI4E8-unsplash.webp" rel="preload" loading="lazy" alt="HIT" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">Nutritional training</h3>
+             <p class="text-gray-600 text-sm">We provide dietary plans for all fitness levels.</p>
+            </div>
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <div class="bg-white shadow-lg rounded-2xl p-8 max-w-sm mx-auto">
+              <img src="/images/nathan-dumlao-DT3bb-KDAus-unsplash.webp" rel="preload" loading="lazy" alt="Yoga" class="w-full h-48 object-cover rounded-xl mb-6">
+              <h3 class="text-xl font-semibold">Yoga & Mobility</h3>
+              <p class="text-gray-600 text-sm">Improve flexibility and reduce stress.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- Navigation -->
+        <button class="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 ml-2 z-50"></button>
+        <button class="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 mr-2 z-50"></button>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trainers, Membership, Schedule Sections -->
+<!-- Apply same fixes: max-w-6xl, mx-auto, px-6/10, overflow-hidden for images, mobile-friendly tables -->
+<!-- Trainers Section -->
+  <div class="max-w-6xl mx-auto py-16 px-6 md:px-10">
+    <h2 class="text-3xl font-bold text-center mb-10 text-stone-700">Meet Our Trainers</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Trainer Card -->
+      <div data-aos="fade-right"  data-aos-duration="900" class="bg-white shadow-lg rounded-2xl overflow-hidden text-center p-6 hover:shadow-xl transition">
+        <img src="/images/mediamodifier-m6Hw3FybWPA-unsplash.webp" rel="preload" loading="lazy" alt="Trainer" class="w-full rounded-[10px] h-screen mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-stone-600">Alex Johnson</h3>
+        <p class="text-stone-600 text-sm mb-2">Strength & Conditioning Coach</p>
+        <p class="text-gray-600 text-sm">10+ years helping athletes achieve peak performance through functional training.</p>
+      </div>
+
+      <div data-aos="fade-right"  data-aos-duration="1400" class="bg-white shadow-lg rounded-2xl overflow-hidden text-center p-6 hover:shadow-xl transition">
+        <img src="/images/sule-makaroglu-8opGXsff3uc-unsplash.webp " rel="preload" loading="lazy" alt="Trainer" class="w-full rounded-[10px] h-screen mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-stone-600">Samantha Lee</h3>
+        <p class="text-stone-600 text-sm mb-2">Yoga & Mobility Expert</p>
+        <p class="text-gray-600 text-sm">Dedicated to balance, flexibility, and mental wellness through mindful movement.</p>
+      </div>
+
+      <div data-aos="fade-right"  data-aos-duration="2000" class="bg-white shadow-lg rounded-2xl overflow-hidden text-center p-6 hover:shadow-xl transition">
+        <img src="/images/george-dagerotip-tvqznmgvFDU-unsplash.webp" rel="preload" loading="lazy" alt="Trainer" class="w-full rounded-[10px] h-screen mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-stone-600">David King</h3>
+        <p class="text-stone-600 text-sm mb-2">Nutrition & Lifestyle Coach</p>
+        <p class="text-gray-600 text-sm">Empowering clients with tailored nutrition and sustainable fitness habits.</p>
+      </div>
+    </div>
+  </div>
+  <section class="bg-stone-100 py-16" id="membership">
+  <div id="memberships" class="max-w-6xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold text-red-600 mb-4">Choose Your Plan & Start Training Today</h2>
+    <p class="text-gray-600 mb-12">Join PulseZone and take your fitness journey to the next level.</p>
+
+    <div data-aos="fade-left"  data-aos-duration="2000"  class="grid md:grid-cols-3 gap-8">
+      <!-- Basic Plan -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Basic Plan</h3>
+        <p class="text-gray-500 mb-4">Perfect for newcomers who want to build consistency.</p>
+        <p class="text-3xl font-bold mb-4 text-red-600">₦10,000<span class="text-base text-gray-500">/month</span></p>
+        <ul class="text-gray-600 mb-6 space-y-2">
+          <li>✅ Access to gym floor</li>
+          <li>✅ Locker room</li>
+          <li>✅ Free orientation session</li>
+        </ul>
+        <button  onclick="location.href='enroll.html'" class="bg-red-600 text-white py-2 px-6 rounded-xl hover:bg-red-700 transition">Join Now</button>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition border-2 border-red-600">
+        <h3 class="text-xl font-semibold mb-3">Pro Plan</h3>
+        <p class="text-gray-500 mb-4">For those serious about results and tracking progress.</p>
+        <p class="text-3xl font-bold mb-4 text-red-600">₦20,000<span class="text-base text-gray-500">/month</span></p>
+        <ul class="text-gray-600 mb-6 space-y-2">
+          <li>✅ Everything in Basic</li>
+          <li>✅ Group fitness classes</li>
+          <li>✅ 1 Personal training session/week</li>
+        </ul>
+        <button  onclick="location.href='enroll.html'" class="bg-red-600 text-white py-2 px-6 rounded-xl hover:bg-red-700 transition">Join Now</button>
+      </div>
+
+      <!-- Elite Plan -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-3">Elite Plan</h3>
+        <p class="text-gray-500 mb-4">Designed for top performance and one-on-one coaching.</p>
+        <p class="text-3xl font-bold mb-4 text-red-600">₦35,000<span class="text-base text-gray-500">/month</span></p>
+        <ul class="text-gray-600 mb-6 space-y-2">
+          <li>✅ Everything in Pro</li>
+          <li>✅ Unlimited personal training</li>
+          <li>✅ Nutrition & meal planning</li>
+          <li>✅ Priority support</li>
+        </ul>
+        <button   onclick="location.href='enroll.html'" class="bg-red-600 text-white py-2 px-6 rounded-xl hover:bg-red-700 transition">Join Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-gray-50 py-16" id="schedule">
+  <div id="schedule" class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-[#BD0A0D] mb-4">Training Schedule</h2>
+    <p class="text-gray-600 mb-12">
+      Stay on track with our weekly training plan. Choose the perfect time that fits your lifestyle.
+    </p>
+
+    <!-- Desktop Table -->
+    <div class="hidden md:block overflow-x-auto">
+      <table class="min-w-full border border-gray-200 rounded-xl shadow-lg text-left">
+        <thead class="bg-[#BD0A0D] text-white">
+          <tr>
+            <th class="py-4 px-6 text-center font-semibold">Day</th>
+            <th class="py-4 px-6 text-center font-semibold">Morning</th>
+            <th class="py-4 px-6 text-center font-semibold">Afternoon</th>
+            <th class="py-4 px-6 text-center font-semibold">Evening</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Monday</td>
+            <td class="py-4 px-6 text-center">Strength Training</td>
+            <td class="py-4 px-6 text-center">Cardio Burn</td>
+            <td class="py-4 px-6 text-center">HIIT Session</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Tuesday</td>
+            <td class="py-4 px-6 text-center">Yoga Flow</td>
+            <td class="py-4 px-6 text-center">Core & Abs</td>
+            <td class="py-4 px-6 text-center">Boxing Class</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Wednesday</td>
+            <td class="py-4 px-6 text-center">Functional Workout</td>
+            <td class="py-4 px-6 text-center">—</td>
+            <td class="py-4 px-6 text-center">Spin Class</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Thursday</td>
+            <td class="py-4 px-6 text-center">Mobility & Stretch</td>
+            <td class="py-4 px-6 text-center">Weightlifting</td>
+            <td class="py-4 px-6 text-center">Full Body Circuit</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Friday</td>
+            <td class="py-4 px-6 text-center">Cardio Blast</td>
+            <td class="py-4 px-6 text-center">CrossFit</td>
+            <td class="py-4 px-6 text-center">Strength & Conditioning</td>
+          </tr>
+          <tr class="border-b hover:bg-gray-100 transition">
+            <td class="py-4 px-6 font-semibold text-center">Saturday</td>
+            <td class="py-4 px-6 text-center">Bootcamp</td>
+            <td class="py-4 px-6 text-center">—</td>
+            <td class="py-4 px-6 text-center">Zumba Dance</td>
+          </tr>
+          <tr>
+            <td class="py-4 px-6 font-semibold text-center">Sunday</td>
+            <td class="py-4 px-6 text-center">Rest Day</td>
+            <td class="py-4 px-6 text-center">—</td>
+            <td class="py-4 px-6 text-center">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="block md:hidden space-y-6">
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Monday</h3>
+        <p><span class="font-semibold">Morning:</span> Strength Training</p>
+        <p><span class="font-semibold">Afternoon:</span> Cardio Burn</p>
+        <p><span class="font-semibold">Evening:</span> HIIT Session</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Tuesday</h3>
+        <p><span class="font-semibold">Morning:</span> Yoga Flow</p>
+        <p><span class="font-semibold">Afternoon:</span> Core & Abs</p>
+        <p><span class="font-semibold">Evening:</span> Boxing Class</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Wednesday</h3>
+        <p><span class="font-semibold">Morning:</span> Functional Workout</p>
+        <p><span class="font-semibold">Afternoon:</span> —</p>
+        <p><span class="font-semibold">Evening:</span> Spin Class</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Thursday</h3>
+        <p><span class="font-semibold">Morning:</span> Mobility & Stretch</p>
+        <p><span class="font-semibold">Afternoon:</span> Weightlifting</p>
+        <p><span class="font-semibold">Evening:</span> Full Body Circuit</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Friday</h3>
+        <p><span class="font-semibold">Morning:</span> Cardio Blast</p>
+        <p><span class="font-semibold">Afternoon:</span> CrossFit</p>
+        <p><span class="font-semibold">Evening:</span> Strength & Conditioning</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Saturday</h3>
+        <p><span class="font-semibold">Morning:</span> Bootcamp</p>
+        <p><span class="font-semibold">Afternoon:</span> —</p>
+        <p><span class="font-semibold">Evening:</span> Zumba Dance</p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-xl shadow p-4">
+        <h3 class="text-[#BD0A0D] font-semibold text-lg mb-2">Sunday</h3>
+        <p><span class="font-semibold">Morning:</span> Rest Day</p>
+        <p><span class="font-semibold">Afternoon:</span> —</p>
+        <p><span class="font-semibold">Evening:</span> —</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#111] text-gray-300 py-12">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Logo + About -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#BD0A0D] mb-4">PulseZone</h2>
+      <p class="text-sm leading-relaxed">
+        Train with passion, perform with purpose. At PulseZone, we help you achieve your fitness goals through
+        expert guidance, powerful programs, and community support.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#home" class="hover:text-[#BD0A0D] transition">Home</a></li>
+        <li><a href="#about" class="hover:text-[#BD0A0D] transition">About</a></li>
+        <li><a href="#programs" class="hover:text-[#BD0A0D] transition">Programs</a></li>
+        <li><a href="#schedule" class="hover:text-[#BD0A0D] transition">Schedule</a></li>
+        <li><a href="enroll.html"  class="hover:text-[#BD0A0D] transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Contact Us</h3>
+      <ul class="space-y-2">
+        <li><i class="fa-solid fa-location-dot text-[#BD0A0D] mr-2"></i> 45 Fitness Avenue, Lagos, Nigeria</li>
+        <li><i class="fa-solid fa-phone text-[#BD0A0D] mr-2"></i> +234 9064516938</li>
+        <li><i class="fa-solid fa-envelope text-[#BD0A0D] mr-2"></i> israelloko65@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- Socials -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-[#BD0A0D] cursor-pointer transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+        <a href="#" class="hover:text-[#BD0A0D] cursor-pointer transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+        <a href="#" class="hover:text-[#BD0A0D] cursor-pointer transition"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+        <a href="#" class="hover:text-[#BD0A0D] cursor-pointer transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm">
+    <p>© 2025 PulseZone. All rights reserved. | Designed with ❤️ by <span class="text-[#BD0A0D] font-semibold">Israel Loko</span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
