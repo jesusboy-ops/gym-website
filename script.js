@@ -36,3 +36,32 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 20,
   virtual: true, 
 });
+ const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Create X button inside the dropdown
+  const closeBtn = document.createElement("button");
+  closeBtn.innerHTML = "✕";
+  closeBtn.className =
+    "text-white text-3xl absolute top-4 right-6 md:hidden";
+  mobileMenu.appendChild(closeBtn);
+
+  // Open mobile menu
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Close with the X button
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    const clickedInsideMenu = mobileMenu.contains(e.target);
+    const clickedHamburger = menuBtn.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedHamburger) {
+      mobileMenu.classList.add("hidden");
+    }
+  });

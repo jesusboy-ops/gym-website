@@ -35,17 +35,51 @@
   <img src="/images/sven-mieke-MsCgmHuirDo-unsplash.webp" alt="hero-image" class="object-cover w-full h-full">
 
   <!-- Fixed Nav -->
-  <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-10 py-2 bg-transparent">
-    <img src="/images/pulsezone-removebg-preview.webp" loading="lazy" alt="Logo" class="w-[100px] md:w-[150px]">
-    <div class="hidden md:flex gap-4 bg-white/30 text-black backdrop-blur-md px-5 py-3 rounded-[10px]">
-      <a href="#home" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Home</a>
-      <a href="#about" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">About Us</a>
-      <a href="#programs" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Programs</a>
-      <a href="#memberships" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Memberships</a>
-      <a href="#schedule" class="text-white hover:bg-white/30 hover:px-4 hover:py-2 cursor-pointer hover:rounded-[30px]">Schedule</a>
-    </div>
-    <button onclick="location.href='enroll.html'" class="bg-[#BD0A0D] hover:bg-stone-500 text-white py-2 px-4 rounded-[10px] text-sm md:text-base">Enroll</button>
-  </nav>
+<nav class="fixed top-0 left-0 w-full z-[9999] bg-transparent px-4 md:px-10 py-3 flex items-center justify-between">
+  <!-- Logo -->
+  <img src="/images/pulsezone-removebg-preview.webp" loading="lazy" alt="Logo" 
+       class="w-[100px] md:w-[150px]">
+
+  <!-- Hamburger Button -->
+ <button id="menu-btn" class="md:hidden flex flex-col justify-center gap-1.5 group">
+  <span class="w-7 h-0.5 bg-[#BD0A0D] rounded transition-all duration-300"></span>
+  <span class="w-7 h-0.5 bg-[#BD0A0D] rounded transition-all duration-300"></span>
+  <span class="w-7 h-0.5 bg-[#BD0A0D] rounded transition-all duration-300"></span>
+</button>
+
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex gap-6 bg-white/20 backdrop-blur-lg px-6 py-3 rounded-xl text-white">
+    <a href="#home" class="hover:text-gray-300 transition">Home</a>
+    <a href="#about" class="hover:text-gray-300 transition">About Us</a>
+    <a href="#programs" class="hover:text-gray-300 transition">Programs</a>
+    <a href="#memberships" class="hover:text-gray-300 transition">Memberships</a>
+    <a href="#schedule" class="hover:text-gray-300 transition">Schedule</a>
+  </div>
+
+  <!-- Enroll Button -->
+  <button onclick="location.href='enroll.html'" 
+          class="hidden md:block bg-[#BD0A0D] hover:bg-red-700 text-white py-2 px-5 rounded-xl transition">
+    Enroll
+  </button>
+</nav>
+
+<!-- Mobile Dropdown -->
+<div id="mobile-menu" class="hidden fixed top-20 left-0
+ z-50 top-20 left-0 w-full px-4">
+  <div class="bg-white/10 backdrop-blur-xl text-white rounded-2xl p-6 flex flex-col gap-4 shadow-lg border border-white/10">
+    <a href="#home" class="py-2 px-3 rounded-lg hover:bg-white/20 transition">Home</a>
+    <a href="#about" class="py-2 px-3 rounded-lg hover:bg-white/20 transition">About Us</a>
+    <a href="#programs" class="py-2 px-3 rounded-lg hover:bg-white/20 transition">Programs</a>
+    <a href="#memberships" class="py-2 px-3 rounded-lg hover:bg-white/20 transition">Memberships</a>
+    <a href="#schedule" class="py-2 px-3 rounded-lg hover:bg-white/20 transition">Schedule</a>
+
+    <button onclick="location.href='enroll.html'" 
+            class="bg-[#BD0A0D] hover:bg-red-700 text-white py-2 rounded-lg transition">
+      Enroll
+    </button>
+  </div>
+</div>
 
   <!-- Hero Text -->
   <div id="home" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center px-4">
